@@ -1,3 +1,6 @@
+/**
+ * Classe controladora do modelo MVC
+ */
 public class Controller{
     CentralDeContas centralDeContas = CentralDeContas.getInstancia();
 
