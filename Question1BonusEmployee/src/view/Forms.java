@@ -14,7 +14,7 @@ public class Forms{
     }
 
     private void escolherOpcao(int opcao){
-        if (opcao == 3){
+        if (opcao == 2){
             System.out.println("Bom trabalho!! =)");
         }
         else{
@@ -23,11 +23,6 @@ public class Forms{
             switch (opcao) {
                 case 1:
                     cadastrarFuncionarios();
-                    break;
-                case 2:
-                    //exibir funcionarios aqui
-                    break;
-                case 3:
                     break;
                 default:
                     break;
@@ -58,9 +53,8 @@ public class Forms{
     }
 
     private void exibirMenu() {
-        System.out.println("1 - Cadastrar funcionário");
-        System.out.println("2 - Exibir funcionários");
-        System.out.println("3 - Sair");
+        System.out.println("1 - Cadastrar funcionários");
+        System.out.println("2 - Sair");
     }
 
     private int lerOpcao() {
