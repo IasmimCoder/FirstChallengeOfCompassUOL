@@ -8,7 +8,6 @@ public class Forms{
         leitor = new Scanner(System.in);
     }
 
-
     public void executarView(int opcao){
         if (opcao == 3){
             System.out.println("Bom trabalho!! =)");
@@ -66,5 +65,5 @@ public class Forms{
         return Integer.parseInt(leitor.nextLine());
     }
 
-    
+
 }
