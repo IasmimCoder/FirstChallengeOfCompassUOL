@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Classe controladora do modelo MVC, visando que o model não se acople com 
  * a view
@@ -8,4 +10,8 @@ public class Controller{
     public void adicionarFuncionario(String nomeCompleto, double salario){
         centralDeContas.adicionarFuncionario(nomeCompleto, salario);
     };
+
+    public ArrayList<Funcionario> getFuncionarios(){
+        return centralDeContas.getFuncionarios();
+    }
 }

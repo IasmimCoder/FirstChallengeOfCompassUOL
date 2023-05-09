@@ -1,38 +1,61 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Forms{
-    Controller controlador = new Controller();
+    private Controller controlador = new Controller();
     private Scanner leitor;
-   
+
+
     public Forms(){
         leitor = new Scanner(System.in);
     }
 
+
+
     public void executarView(){
+        escolherOpcao();
+    }
+
+    /*Metódo implementado recursivamente com o objetivo de forçar o usuário
+     * a escolher uma das opções.
+     */
+    private void escolherOpcao(){
         exibirMenu();
-        escolherOpcao(0);
+        int opcao = lerOpcao();
+
+        switch (opcao) {
+            case 1:
+                formularioCadastrarFuncionarios();
+                escolherOpcao();
+                break;
+            case 2:
+                System.out.println("Funcionarios");
+                break;
+            default:
+                escolherOpcao();
+                break;
+        }
+    
     }
 
-    private void escolherOpcao(int opcao){
-        if (opcao == 2){
-            System.out.println("Bom trabalho!! =)");
-        }
-        else{
-            opcao = lerOpcao();
+    private void exibirFuncionariosCadastrados(){
+        ArrayList<Funcionario> funcionarios = controlador.getFuncionarios();
 
-            switch (opcao) {
-                case 1:
-                    cadastrarFuncionarios();
-                    break;
-                default:
-                    break;
-            }
+       imprimirTabelaFuncionarios(funcionarios);
+    }
 
-           escolherOpcao(opcao);
+    public void imprimirTabelaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
+        System.out.printf("%-20s%-10s%-20s%-10s%-20s\n", "Nome", "Salário", "Bônus", "Desconto", "Salário Líquido");
+        for (Funcionario f : listaFuncionarios) {
+            double bonus = 0;
+            double desconto = 0;
+            double salarioLiquido = 0;
+            System.out.printf("%-20s%-10d%-20s%-10.2f%-20s\n", f.getNomeCompleto(), f.getSalarioBruto(), bonus, desconto, salarioLiquido);
         }
     }
 
-    private void cadastrarFuncionarios(){
+
+    private void formularioCadastrarFuncionarios(){
         
         System.out.print("Quantos usuários você deseja cadastrar? ");
         int qtdFuncionarios = Integer.parseInt(leitor.nextLine());
@@ -49,18 +72,17 @@ public class Forms{
             qtdFuncionarios--;
         }
 
-        System.out.println("Usuários cadastrados com sucesso!");
+        System.out.println("\nUsuários cadastrados com sucesso!\n");
     }
 
     private void exibirMenu() {
+        System.out.println("\n\n---MENU---\n\n");
         System.out.println("1 - Cadastrar funcionários");
-        System.out.println("2 - Sair");
+        System.out.println("2 - Finalizar e ver funcionários");
     }
 
     private int lerOpcao() {
-        System.out.print("Digite a opção desejada: ");
+        System.out.print("\nDigite a opção desejada: ");
         return Integer.parseInt(leitor.nextLine());
     }
-
-
 }
