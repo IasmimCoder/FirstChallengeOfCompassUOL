@@ -27,5 +27,21 @@ public class Funcionario {
         this.salarioBruto = salarioBruto;
     }
 
+    public double calcularBonus(){
+        if (salarioBruto >= 1000){
+            return (salarioBruto*0.2);
+        }
+        if(salarioBruto > 1000 && salarioBruto <= 2000){
+            return (salarioBruto*0.1);
+        }
+        return 0;
+    }
+
+    public double calcularDesconto(){
+        if(salarioBruto > 2000){
+            return (salarioBruto * 0.1);
+        }
+        return 0;
+    }
 
 }
