@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Forms{
+    Controller controlador = new Controller();
     private Scanner leitor;
    
     public Forms(){
@@ -8,20 +9,29 @@ public class Forms{
     }
 
 
-    public void executarView(){
-        exibirMenu();
-        int opcao = lerOpcao();
+    public void executarView(int opcao){
+        if (opcao == 3){
+            System.out.println("Bom trabalho!! =)");
+        }
+        else{
+            exibirMenu();
+            opcao = lerOpcao();
 
-        switch (opcao) {
-            case 1:
-                cadastrarFuncionarios();
-                break;
-            case 2:
-                //exibir funcionarios aqui
-                break;
-            default:
-                System.out.println("Lançamento de Exception aqui");
-                break;
+            switch (opcao) {
+                case 1:
+                    cadastrarFuncionarios();
+                    break;
+                case 2:
+                    //exibir funcionarios aqui
+                    break;
+                case 3:
+                    break;
+                default:
+                    opcao = lerOpcao();
+                    break;
+            }
+
+            executarView(opcao);
         }
     }
 
@@ -33,14 +43,16 @@ public class Forms{
         while(qtdFuncionarios > 0){
 
             System.out.print("Digite o nome completo: ");
+            String nomeCompleto = leitor.nextLine();
         
             System.out.print("Digite o salário atual: ");
             double salarioAtual = Double.parseDouble(leitor.nextLine());
 
-            //chamar controller aqui
-            
-                qtdFuncionarios--;
+            controlador.adicionarFuncionario(nomeCompleto, salarioAtual);
+            qtdFuncionarios--;
         }
+
+        System.out.println("Usuários cadastrados com sucesso!");
     }
 
     private void exibirMenu() {
@@ -53,4 +65,6 @@ public class Forms{
         System.out.print("Digite a opção desejada: ");
         return Integer.parseInt(leitor.nextLine());
     }
+
+    
 }
