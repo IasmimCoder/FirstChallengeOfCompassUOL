@@ -10,28 +10,22 @@ public class Funcionario {
         this.salarioBruto = salarioBruto;
     }
 
-    public String getFirst_name() {
-        return this.first_name;
+
+    public String getNomeCompleto() {
+        return this.nomeCompleto;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
-    public String getLast_name() {
-        return this.last_name;
+    public double getSalarioBruto() {
+        return this.salarioBruto;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setSalarioBruto(double salarioBruto) {
+        this.salarioBruto = salarioBruto;
     }
 
-    public double getSalary() {
-        return this.salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
 
 }

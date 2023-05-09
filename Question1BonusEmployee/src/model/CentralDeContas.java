@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Classe que agrupa os funcionários cadastrados. 
  * Foi utilizado o Design Pattern Sigleton para garantir uma instância única do 
@@ -6,7 +8,7 @@
 
 public class CentralDeContas{
     private static CentralDeContas instanciaUnica;
-    private ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>;
+    private ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
     private CentralDeContas(){};
     
@@ -15,7 +17,7 @@ public class CentralDeContas{
      */
     public static CentralDeContas getInstancia() {
         if (instanciaUnica == null) {
-            instaciaUnica = new CentralDeContas();
+            instanciaUnica = new CentralDeContas();
         }
         return instanciaUnica;
     }
@@ -28,7 +30,4 @@ public class CentralDeContas{
         Funcionario novoFuncionario = new Funcionario(nomeCompleto, salarioBruto);
         funcionarios.add(novoFuncionario);
     }
-
-
-
 }
