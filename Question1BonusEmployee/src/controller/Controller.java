@@ -1,10 +1,11 @@
 /**
- * Classe controladora do modelo MVC
+ * Classe controladora do modelo MVC, visando que o model não se acople com 
+ * a view
  */
 public class Controller{
     CentralDeContas centralDeContas = CentralDeContas.getInstancia();
 
-    public void adicionarFuncionario(String first_name, String last_name, double salary){
-        centralDeContas.adicionarFuncionario(first_name, last_name, salary);
+    public void adicionarFuncionario(String nomeCompleto, double salario){
+        centralDeContas.adicionarFuncionario(nomeCompleto, salario);
     };
 }

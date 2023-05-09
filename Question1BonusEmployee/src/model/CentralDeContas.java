@@ -10,6 +10,9 @@ public class CentralDeContas{
 
     private CentralDeContas(){};
     
+    /**
+     * Retorna a instância única de Central de Contas.
+     */
     public static CentralDeContas getInstancia() {
         if (instanciaUnica == null) {
             instaciaUnica = new CentralDeContas();
@@ -17,8 +20,15 @@ public class CentralDeContas{
         return instanciaUnica;
     }
 
-    public void adicionarFuncionario(String first_name, String last_name, double salary){
-        Funcionario novoFuncionario = new Funcionario(first_name, last_name, salary);
+    public ArrayList<Funcionario> getFuncionarios() {
+        return this.funcionarios;
+    }
+
+    public void adicionarFuncionario(String nomeCompleto, double salarioBruto){
+        Funcionario novoFuncionario = new Funcionario(nomeCompleto, salarioBruto);
         funcionarios.add(novoFuncionario);
     }
+
+
+
 }

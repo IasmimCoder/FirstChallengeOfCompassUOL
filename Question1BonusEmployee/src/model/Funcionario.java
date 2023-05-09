@@ -1,15 +1,13 @@
 public class Funcionario {
-    private String first_name;
-    private String last_name;
-    private double salary;
+    private String nomeCompleto;
+    private double salarioBruto;
 
     public Funcionario() {
     }
 
-    public Funcionario(String first_name, String last_name, double salary) {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.salary = salary;
+    public Funcionario(String nomeCompleto, double salarioBruto) {
+        this.nomeCompleto = nomeCompleto;
+        this.salarioBruto = salarioBruto;
     }
 
     public String getFirst_name() {
