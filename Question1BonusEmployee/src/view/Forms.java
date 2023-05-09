@@ -10,14 +10,12 @@ public class Forms{
         leitor = new Scanner(System.in);
     }
 
-
-
     public void executarView(){
         escolherOpcao();
     }
 
     /*Metódo implementado recursivamente com o objetivo de forçar o usuário
-     * a escolher uma das opções.
+     * a escolher uma das opções ou sair.
      */
     private void escolherOpcao(){
         exibirMenu();
@@ -29,7 +27,7 @@ public class Forms{
                 escolherOpcao();
                 break;
             case 2:
-                System.out.println("Funcionarios");
+                imprimirTabelaFuncionarios();
                 break;
             default:
                 escolherOpcao();
@@ -38,21 +36,23 @@ public class Forms{
     
     }
 
-    private void exibirFuncionariosCadastrados(){
-        ArrayList<Funcionario> funcionarios = controlador.getFuncionarios();
+ public void imprimirTabelaFuncionarios() {
+    ArrayList<Funcionario> funcionarios = controlador.getFuncionarios();
+    System.out.println("\n\nFUNCIONARIOS CADASTRADOS\n");
+    System.out.printf("%-20s%-10s%-20s%-10s%-20s\n", "Nome", "Salário", "Bônus", "Desconto", "Salário Líquido");
+  
+    
+    for (Funcionario f : funcionarios) {
+        String bonus = String.format("%.2f", f.calcularBonus());
+        String desconto = String.format("%.2f", f.calcularDesconto());
+        String salarioLiquido = String.format("%.2f", f.calcularSalarioLiquido());
 
-       imprimirTabelaFuncionarios(funcionarios);
+        System.out.printf("%-20s%-10.2f%-20s%-10s%-20s\n", f.getNomeCompleto(), f.getSalarioBruto(), bonus, desconto, salarioLiquido);
     }
 
-    public void imprimirTabelaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
-        System.out.printf("%-20s%-10s%-20s%-10s%-20s\n", "Nome", "Salário", "Bônus", "Desconto", "Salário Líquido");
-        for (Funcionario f : listaFuncionarios) {
-            double bonus = 0;
-            double desconto = 0;
-            double salarioLiquido = 0;
-            System.out.printf("%-20s%-10d%-20s%-10.2f%-20s\n", f.getNomeCompleto(), f.getSalarioBruto(), bonus, desconto, salarioLiquido);
-        }
-    }
+    System.out.println("\n\nBom trabalho!! =)");
+}
+
 
 
     private void formularioCadastrarFuncionarios(){
@@ -86,3 +86,4 @@ public class Forms{
         return Integer.parseInt(leitor.nextLine());
     }
 }
+
