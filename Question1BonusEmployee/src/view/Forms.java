@@ -15,7 +15,7 @@ public class Forms{
     }
 
     /*Metódo implementado recursivamente com o objetivo de forçar o usuário
-     * a escolher uma das opções ou sair.
+     * a escolher uma das opções ou sair(caso base da recursividade).
      */
     private void escolherOpcao(){
         exibirMenu();
