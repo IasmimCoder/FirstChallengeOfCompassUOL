@@ -8,12 +8,16 @@ public class Forms{
         leitor = new Scanner(System.in);
     }
 
-    public void executarView(int opcao){
+    public void executarView(){
+        exibirMenu();
+        escolherOpcao(0);
+    }
+
+    private void escolherOpcao(int opcao){
         if (opcao == 3){
             System.out.println("Bom trabalho!! =)");
         }
         else{
-            exibirMenu();
             opcao = lerOpcao();
 
             switch (opcao) {
@@ -26,11 +30,10 @@ public class Forms{
                 case 3:
                     break;
                 default:
-                    opcao = lerOpcao();
                     break;
             }
 
-            executarView(opcao);
+           escolherOpcao(opcao);
         }
     }
 
