@@ -44,4 +44,8 @@ public class Funcionario {
         return 0;
     }
 
+    public double calcularSalarioLiquido(){
+        return salarioBruto + calcularBonus() - calcularDesconto();
+    }
+
 }
