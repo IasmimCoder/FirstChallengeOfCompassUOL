@@ -12,6 +12,7 @@ public class Emoticons {
 
         
         String emotion = Emoticons.definirSentimentoDaMensagem(mensagem);
+        leitor.close();
         return emotion;
     }
 
