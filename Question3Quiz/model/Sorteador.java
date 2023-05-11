@@ -9,11 +9,12 @@ import java.util.Random;
 import java.util.Set;
 
 /*
- * Armazena as questões lidas pela classe Leitor de Questões para decidir quais    questões estarão na jogada.
+ * Armazena as questões lidas pela classe Leitor de Questões para decidir quais
+ * questões estarão na jogada.
  */
 public class Sorteador {
     private ArrayList<Question> questoesDaJogada = new ArrayList<Question>();
-    private ArrayList<Question> questoesCadastradas = LeitorDeQuestoes.lerQuestoes();
+    private static ArrayList<Question> questoesCadastradas = LeitorDeQuestoes.lerQuestoes();
 
     public Sorteador(int quantidadeDeQuestoes){
         sortearQuestoesDaJogada(quantidadeDeQuestoes);
@@ -21,6 +22,10 @@ public class Sorteador {
     
     public ArrayList<Question> getQuestoesSorteadas(){
         return questoesDaJogada;
+    }
+
+    public static int qtdQuestoesCadastradas(){
+        return questoesCadastradas.size();
     }
 
     private  void sortearQuestoesDaJogada(int quantidadeDeQuestoes){

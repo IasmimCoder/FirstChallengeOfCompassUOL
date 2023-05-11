@@ -11,15 +11,14 @@ import Question3Quiz.view.Apresentacao;
 public class Main {
     public static void main(String[] args) {
 
-        Quiz quiz = new Quiz(5);
-        int qtd = quiz.getQuestoes().length;
-        System.out.println(qtd);
-        // Apresentacao apresentacao = new Apresentacao();
-        // apresentacao.titulo();
+        Apresentacao apresentacao = new Apresentacao();
+        apresentacao.executar();
 
-        // Sorteador sorteador = new Sorteador(5);
-        // ArrayList<Question> questoesLidas = sorteador.getQuestoesSorteadas();
-        // System.out.println(questoesLidas.size());
+
+        // Quiz quiz = new Quiz(5);
+        // int questoes = quiz.getQuestoes().length;
+        // System.out.println(questoes);
+     
 
         // for(Question q: questoesLidas){
         //     System.out.println("\n\n\nQuestaoooooooo\n");

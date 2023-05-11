@@ -1,18 +1,26 @@
 package Question3Quiz.view;
 import java.util.Random;
+import java.util.Scanner;
+
+import Question3Quiz.controller.Controladora;
 
 public class Apresentacao {
+    private Controladora controladora = new Controladora();
+    private Scanner leitor = new Scanner(System.in);
 
-    public Apresentacao(){};
+    public Apresentacao(){
+
+    };
 
     public void executar(){
         titulo();
-
+        controladora.gerarQuiz(10);
     }
 
     public void mostrarQuestoes(){
-
+    
     }
+
 
     private void titulo(){
         printRandomColorfulText("\n\n\n-----------------------QUIZ-----------------------\n\n\n");
