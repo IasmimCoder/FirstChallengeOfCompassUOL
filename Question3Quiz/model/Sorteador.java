@@ -32,7 +32,7 @@ public class Sorteador {
 
         int qtdQuestoesCadastradas = questoesCadastradas.size();
 
-        Set<Integer> randomNumbers = generateRandomNumbers(quantidadeDeQuestoes, 0, qtdQuestoesCadastradas);
+        Set<Integer> randomNumbers = generateRandomNumbers(quantidadeDeQuestoes, 0, qtdQuestoesCadastradas -1);
 
         for (int number : randomNumbers) {
             questoesDaJogada.add(questoesCadastradas.get(number));
