@@ -2,79 +2,144 @@ O que a abelha disse para o cachorro?
 Buzz off!
 Woof woof!
 Nada, abelhas não falam com cachorros.
+2
 Por que a tartaruga atravessou a rua devagar?
 Porque estava cansada
 Porque não tinha pressa
 Porque estava estreando a faixa nova
+2
 Por que o pato tem pé de pato?
 Porque ele não consegue encontrar um sapato que sirva
 Porque ele precisa nadar
 Porque seus sapatos ficaram velhos
+0
 Qual é o lugar favorito dos unicórnios?
 A floresta encantada
 O jardim das fadas
 O arco-íris
+0
 Por que a banana foi ao médico?
 Porque estava descascando
 Porque estava se sentindo amassada
 Porque estava com câimbras
+2
 Qual é o alimento favorito dos alienígenas?
 Pizza
 Hambúrguer
 Plutônio
+2
 Por que o cachorro não pode usar o computador?
 Porque ele não sabe digitar
 Porque ele não tem polegar opositor
 Porque ele prefere morder o teclado
+2
 Por que a galinha atravessou a rua correndo?
 Porque estava atrasada para um compromisso
 Porque estava sendo perseguida pelo coelho
 Porque queria mostrar que também podia correr
+2
 Qual é a cor favorita dos dinossauros?
 Verde
 Marrom
 Extinta
+2
 Por que o lápis tem medo do apontador?
+Porque ele pode perder a ponta
 Porque ele pode se quebrar
 Porque ele pode ficar menor
-Porque ele pode perder a ponta
+0
 Por que o cachorro roeu o tapete?
 Para se divertir
-Porque estava com fome
 Porque queria fazer um buraco para escapar
+Porque estava com fome
+1
 Por que o papagaio não cai quando dorme?
 Porque ele dorme em pé
 Porque ele tem asas
 Porque ele dorme na gaiola
+1
 Qual é o alimento favorito dos desenvolvedores de software?
 Pizza
 Batata frita
 Código-fonte
+2
 Por que o desenvolvedor de software Bob decidiu largar seu emprego?
+Porque ele descobriu que gostava mais de jogar videogames do que de programar
 Porque ele foi contratado por uma empresa maior e melhor
 Porque ele queria se tornar um influenciador de tecnologia
-cPorque ele descobriu que gostava mais de jogar videogames do que de programar
+0
 Qual é o animal favorito dos desenvolvedores de software?
 Gato
+Robô
 Cão
-Robô Fantasma
+1
 Qual é o livro favorito dos desenvolvedores de software?
 Código Limpo, de Robert C. Martin
 A Arte da Guerra, de Sun Tzu
 O Senhor dos Anéis, de J.R.R. Tolkien
+0
 Por que o desenvolvedor de software Bob decidiu criar um software de namoro?
 Porque ele estava cansado de usar aplicativos de namoro
 Porque ele queria ganhar dinheiro com a sua habilidade em programação
 Porque ele acreditava que podia criar o aplicativo de namoro perfeito
+2
 Por que o desenvolvedor de software Bob decidiu criar um software de viagem no tempo?
 Porque ele sempre sonhou em viajar no tempo
 Porque ele queria ganhar reconhecimento no mundo da tecnologia
 Porque ele achava que podia resolver os paradoxos temporais
+2
 Por que o desenvolvedor de software Bob nunca quer sair de casa?
+Porque ele não quer que seu código seja roubado
 Porque ele prefere ficar programando
 Porque ele tem medo de bugs (os do computador)
-Porque ele não quer que seu código seja roubado
+0
 Por que o desenvolvedor de software Bob sempre está cansado?
 Porque ele trabalha muito
 Porque ele passa a noite acordado programando
 Porque ele não consegue parar de pensar em códigos
+2
+Por que o frango atravessou a rua?
+Para encontrar sua galinha
+Para chegar do outro lado
+Para fugir do cozinheiro
+0
+Qual é o programa de TV favorito dos peixes?
+Shark Tank
+Nemo's Reef
+Pescaria Radical
+1
+Qual é o cereal favorito dos astronautas?
+Space Flakes
+Estrelitas
+Cap'n Crunch
+0
+Qual é o navegador favorito do desenvolvedor de software?
+Chrome
+O que ele mesmo criou
+Internet Explorer (brincadeira, ninguém usa mais isso)
+1
+Por que o desenvolvedor de software não gosta de usar o mouse?
+Porque ele prefere o teclado
+Porque ele tem preguiça de levantar a mão
+Porque ele é um ninja do código
+2
+Qual é a bebida favorita do desenvolvedor de software?
+Café
+Chá
+Água (mas não muita, não queremos curtos circuitos)
+0
+Por que o desenvolvedor de software sempre tem várias telas no computador?
+Para ser mais produtivo
+Para jogar enquanto programa
+Para assistir filmes enquanto trabalha
+0
+Por que o mouse tem medo do gato?
+Porque o gato é o predador natural do mouse
+Porque o gato gosta de brincar com o mouse
+Porque o gato é um hacker e quer roubar os dados do mouse
+2
+Por que o computador não foi à festa?
+Porque ele estava ocupado com atualizações
+Porque ele não tinha memória suficiente
+Porque ele estava com vírus de festa
+0
