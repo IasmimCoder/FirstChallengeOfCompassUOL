@@ -4,10 +4,18 @@ import java.util.ArrayList;
 
 import Question3Quiz.model.LeitorDeQuestoes;
 import Question3Quiz.model.Question;
+import Question3Quiz.model.Quiz;
 import Question3Quiz.model.Sorteador;
+import Question3Quiz.view.Apresentacao;
 
 public class Main {
     public static void main(String[] args) {
+
+        Quiz quiz = new Quiz(5);
+        int qtd = quiz.getQuestoes().length;
+        System.out.println(qtd);
+        // Apresentacao apresentacao = new Apresentacao();
+        // apresentacao.titulo();
 
         // Sorteador sorteador = new Sorteador(5);
         // ArrayList<Question> questoesLidas = sorteador.getQuestoesSorteadas();

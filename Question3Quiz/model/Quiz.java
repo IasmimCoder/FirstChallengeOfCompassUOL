@@ -1,16 +1,20 @@
 package Question3Quiz.model;
 
+import java.util.ArrayList;
+
 public class Quiz{
     
     private Question[] questoes;
     private int score;
 
     public Quiz(int qtdQuestoes){
-        this.questoes = new Question[qtdQuestoes];
+        gerarQuiz(qtdQuestoes);
     }
 
-    public void gerarQuiz(){
-        
+    public void gerarQuiz(int qtdQuestoes){
+        Sorteador sorteador = new Sorteador(qtdQuestoes);
+        ArrayList<Question> questoesSorteadas = sorteador.getQuestoesSorteadas();
+        questoes = questoesSorteadas.toArray(new Question[0]);
     }
 
     public void adicionarQuestao(Question question, int posicao){
