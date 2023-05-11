@@ -1,13 +1,13 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Forms{
-    private Controller controlador = new Controller();
+    private Controladora controlador;
     private Scanner leitor;
 
 
     public Forms(){
         leitor = new Scanner(System.in);
+        controlador = new Controladora();
     }
 
     public void executarView(){
@@ -36,22 +36,22 @@ public class Forms{
     
     }
 
- public void imprimirTabelaFuncionarios() {
-    ArrayList<Funcionario> funcionarios = controlador.getFuncionarios();
-    System.out.println("\n\nFUNCIONARIOS CADASTRADOS\n");
-    System.out.printf("%-20s%-10s%-20s%-10s%-20s\n", "Nome", "Salário", "Bônus", "Desconto", "Salário Líquido");
-  
-    
-    for (Funcionario f : funcionarios) {
-        String bonus = String.format("%.2f", f.calcularBonus());
-        String desconto = String.format("%.2f", f.calcularDesconto());
-        String salarioLiquido = String.format("%.2f", f.calcularSalarioLiquido());
+    public void imprimirTabelaFuncionarios() {
+        
+        int qtdFuncionarios = controlador.getQtdFuncionarios();
+        System.out.println("\n\nFUNCIONARIOS CADASTRADOS\n");
+        System.out.printf("%-20s%-10s%-20s%-10s%-20s\n", "Nome", "Salário", "Bônus", "Desconto", "Salário Líquido");
+        
+        for (int i = 0; i < qtdFuncionarios; i++ ) {
+            String bonus = String.format("%.2f", controlador.calcularBonusFuncionario(i));
+            String desconto = String.format("%.2f", controlador.calcularDescontoFuncionario(i));
+            String salarioLiquido = String.format("%.2f", controlador.calcularSalarioLiquidoFuncionario(i));
 
-        System.out.printf("%-20s%-10.2f%-20s%-10s%-20s\n", f.getNomeCompleto(), f.getSalarioBruto(), bonus, desconto, salarioLiquido);
+            System.out.printf("%-20s%-10.2f%-20s%-10s%-20s\n", controlador.getNomeCompletoFuncionario(i), controlador.getSalarioBrutoFuncionario(i), bonus, desconto, salarioLiquido);
+        }
+
+        System.out.println("\n\nBom trabalho!! =)");
     }
-
-    System.out.println("\n\nBom trabalho!! =)");
-}
 
 
 
