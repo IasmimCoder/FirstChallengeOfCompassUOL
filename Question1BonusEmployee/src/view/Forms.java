@@ -10,7 +10,7 @@ public class Forms{
         controlador = new Controladora();
     }
 
-    public void executarView(){
+    public void executar(){
         escolherOpcao();
     }
 
