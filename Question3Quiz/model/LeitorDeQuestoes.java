@@ -35,7 +35,7 @@ public class LeitorDeQuestoes {
                     respostas[i] = scanner.nextLine();
                 }
                 //int indexRespostaCorreta = Integer.parseInt(scanner.nextLine());
-                int indexRespostaCorreta = sortearRespostaCorreta(respostas.length);
+                int indexRespostaCorreta = Integer.parseInt(scanner.nextLine());
                 Question novaQuestao = new Question(pergunta, respostas, indexRespostaCorreta);
                 questoes.add(novaQuestao);
             }
