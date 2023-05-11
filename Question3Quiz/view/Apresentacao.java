@@ -8,6 +8,8 @@ public class Apresentacao {
     private Controladora controladora = new Controladora();
     private Scanner leitor = new Scanner(System.in);
     private int qtdQuestoes;
+    private int score;
+    private String nomeJogador;
 
     
     public void executar(){
@@ -16,6 +18,7 @@ public class Apresentacao {
 
         apresentacaoQuiz();
         exibirQuiz();
+        finalizarJogo();
     }
     
     public void apresentacaoQuiz(){
@@ -24,7 +27,7 @@ public class Apresentacao {
 
         System.out.print("\nEu sou um quiz e estou aqui para testar o quanto vocês me conhecem. Eu sou rápido como um raio, esperto como um gato e afiado como uma faca. Então, se preparem para responder rapidamente e com precisão!\nMas não se preocupem, se vocês errarem, eu não vou te dar um choque elétrico, ou pior, fazer vocês comerem brócolis!\n\nComo devo lhe chamar? ");
 
-        String nomeJogador = leitor.nextLine();
+        nomeJogador = leitor.nextLine();
         controladora.setNomeJogador(nomeJogador);
 
         
@@ -62,8 +65,22 @@ public class Apresentacao {
     
     }
 
+    private void finalizarJogo(){
+        clear();
+        System.out.println("Foi ótimo jogar com você " + nomeJogador + "!\n\n SCORE FINAL");
+
+        exibirScore();
+
+        if(score < (qtdQuestoes/2)){
+            System.out.println("\nTente melhor na próxima. <3");
+        }
+        else{
+            System.out.println("\nGênio?");
+        }
+    }
+
     private void exibirScore(){
-        int score = controladora.getScore();
+        score = controladora.getScore();
         String scoreString = "Score [" + score + "/" + qtdQuestoes + "]\n";
 
         System.out.println(randomColorfulText(scoreString));
@@ -77,6 +94,7 @@ public class Apresentacao {
             System.out.println("\nCorreto! =) \n");
         }else{
             System.out.println("\nErrado... >:( \n");
+            System.out.println("Resposta correta: " + (controladora.getIndexRespostaCorreta(indexQuestao) + 1));
         }
 
     }
