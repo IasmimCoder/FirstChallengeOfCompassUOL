@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Quiz{
     
     private Question[] questoes;
+    private Jogador jogador;
     private int score;
 
     public Quiz(int qtdQuestoes){
         gerarQuiz(qtdQuestoes);
+        setJogador(new Jogador());
     }
 
     public void gerarQuiz(int qtdQuestoes){
@@ -33,8 +35,22 @@ public class Quiz{
         return this.score;
     }
 
+
+    public Jogador getJogador() {
+        return this.jogador;
+    }
+
+    public void setJogador(Jogador jogador) {
+        this.jogador = jogador;
+    }
+
     public void setScore(int score) {
         this.score = score;
+    }
+
+
+    public void incrementarScore() {
+        score++;
     }
 
 
