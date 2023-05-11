@@ -1,4 +1,8 @@
+package Question1BonusEmployee.src.view;
+
 import java.util.Scanner;
+
+import Question3Quiz.controller.Controladora;
 
 public class Forms{
     private Controladora controlador;

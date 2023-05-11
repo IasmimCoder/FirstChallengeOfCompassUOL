@@ -1,3 +1,5 @@
+package Question1BonusEmployee.src.model;
+
 public class Funcionario {
     private String nomeCompleto;
     private double salarioBruto;

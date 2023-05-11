@@ -1,4 +1,10 @@
+package Question1BonusEmployee.src.controller;
+
+
 import java.util.ArrayList;
+
+import Question1BonusEmployee.src.model.CentralDeContas;
+import Question1BonusEmployee.src.model.Funcionario;
 
 /**
  * Classe controladora do modelo MVC, visando que o model não se acople com 
