@@ -9,23 +9,41 @@ public class Apresentacao {
     private Scanner leitor = new Scanner(System.in);
     private int qtdQuestoes;
 
-    public Apresentacao(){
-
-    };
-
+    
     public void executar(){
         this.qtdQuestoes = 10;
-
-
-        titulo();
         controladora.gerarQuiz(qtdQuestoes);
-        mostrarQuestoes();
-    }
 
-    public void mostrarQuestoes(){
+        apresentacaoQuiz();
+        exibirQuiz();
+    }
+    
+    public void apresentacaoQuiz(){
+        clear();
+        titulo();
+
+        System.out.print("\nEu sou um quiz e estou aqui para testar o quanto vocês me conhecem. Eu sou rápido como um raio, esperto como um gato e afiado como uma faca. Então, se preparem para responder rapidamente e com precisão!\nMas não se preocupem, se vocês errarem, eu não vou te dar um choque elétrico, ou pior, fazer vocês comerem brócolis!\n\nComo devo lhe chamar? ");
+
+        String nomeJogador = leitor.nextLine();
+        controladora.setNomeJogador(nomeJogador);
+
+        
+
+        System.err.println("\n\nVamos começar a testar sua paciência " + nomeJogador + "!\n\nPressione enter para iniciar...");
+
+        leitor.nextLine();
+    };
+
+
+    public void exibirQuiz(){
         for(int i = 0; i < qtdQuestoes; i++){
+            
+            clear();
+            titulo();
+            exibirScore();
+
             String pergunta = 
-            printRandomColorfulText(controladora.getPergunta(i));
+            randomColorfulText(controladora.getPergunta(i)) + "\n";
 
             System.out.format("\n%dº - %s", i+1,pergunta);
             String[] respostas = controladora.getOpcoes(i);
@@ -33,19 +51,52 @@ public class Apresentacao {
             for (int j = 1; j <= 3; j++) {
                 System.out.format("\n%d - %s", j, respostas[j-1]);
             }
+            
+            verificarResposta(i);
+            
+            System.out.print("\nPressione enter para continuar...");
+
+            leitor.nextLine();
+
         }
     
     }
 
+    private void exibirScore(){
+        int score = controladora.getScore();
+        String scoreString = "Score [" + score + "/" + qtdQuestoes + "]\n";
 
-    private void titulo(){
-        String titulo = printRandomColorfulText("\n\n\n-----------------------QUIZ-----------------------\n\n\n");
-        System.out.println(titulo);
-        
+        System.out.println(randomColorfulText(scoreString));
+    }
+
+    private void verificarResposta(int indexQuestao){
+        int respostaUsuario = receberIndexResposta();
+        boolean acertou = controladora.verificarResposta(respostaUsuario, indexQuestao);
+
+        if(acertou){
+            System.out.println("\nCorreto! =) \n");
+        }else{
+            System.out.println("\nErrado... >:( \n");
+        }
+
     }
 
 
-    private static String printRandomColorfulText(String Text) {
+    private int receberIndexResposta(){
+        System.out.print("\n\nQual a resposta? ");
+        int resposta = Integer.parseInt(leitor.nextLine());
+
+        return resposta -1;
+    }
+
+
+    private void titulo(){
+        String titulo = randomColorfulText("-----------------------QUIZ-----------------------\n\n");
+        System.out.println(titulo);
+    }
+
+
+    private static String randomColorfulText(String Text) {
         String ANSI_RESET = "\u001B[0m";
         String[] ANSI_COLORS = {
             "\u001B[31m", // Red
@@ -64,4 +115,23 @@ public class Apresentacao {
 
         return coloredText;
     }
+
+    private static void clear() {
+        try {
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        } catch (Exception e) {
+            System.out.println("Erro ao limpar o terminal: " + e);
+        }
+    }
+
+    public static void delay(long milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            System.out.println("Erro ao aguardar o atraso: " + e);
+            Thread.currentThread().interrupt();
+        }
+    }
 }
+
+
