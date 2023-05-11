@@ -67,7 +67,7 @@ Por que o desenvolvedor de software Bob decidiu largar seu emprego?
 Porque ele descobriu que gostava mais de jogar videogames do que de programar
 Porque ele foi contratado por uma empresa maior e melhor
 Porque ele queria se tornar um influenciador de tecnologia
-0
+1
 Qual é o animal favorito dos desenvolvedores de software?
 Gato
 Robô
