@@ -4,23 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import java.util.Random;
-
 public class LeitorDeQuestoes {
-    private ArrayList<Question> questoesCadastradas = new ArrayList<Question>();
-
-    // public LeitorDeQuestoes(){
-    //     questoesCadastradas = lerQuestoes("perguntas.txt");
-    // }
-
-
-    // public ArrayList<Question> getQuestoesCadastradas() {
-    //     return this.questoesCadastradas;
-    // }
-
-    // public int getQuantidadeDeQuestoes(){
-    //     return questoesCadastradas.size();
-    // }
    
     public static ArrayList<Question> lerQuestoes() {
         ArrayList<Question> questoes = new ArrayList<Question>();
@@ -45,16 +29,6 @@ public class LeitorDeQuestoes {
         }
         
         return questoes;
-    }
-
-    /*
-    Gera um número aleatório entre 0 e o número de alternativas para 
-    decidir a resposta correta.
-    */ 
-    private static int sortearRespostaCorreta(int numeroAlternativas){
-        Random random = new Random();
-        int numeroSorteado = random.nextInt(numeroAlternativas + 1); 
-        return numeroSorteado;
     }
 }
 

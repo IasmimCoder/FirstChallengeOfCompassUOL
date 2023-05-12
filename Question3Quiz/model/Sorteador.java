@@ -1,9 +1,6 @@
 package Question3Quiz.model;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.Scanner;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -42,7 +39,7 @@ public class Sorteador {
     /*
      * sorteia uma quantidade específica de números inteiros 
      * aleatórios sem repetição usando a classe Random e um HashSet. Cada número sorteado
-     * representa o índice sorteado das questão cadastradas no LeitorDeQuestoes
+     * representa o índice sorteado das questão cadastradas.
      */
     private static Set<Integer> generateRandomNumbers(int quantity, int min, int max) {
         
