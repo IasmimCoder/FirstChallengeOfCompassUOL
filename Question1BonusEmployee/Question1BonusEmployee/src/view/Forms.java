@@ -2,7 +2,7 @@ package Question1BonusEmployee.src.view;
 
 import java.util.Scanner;
 
-import Question3Quiz.controller.Controladora;
+import Question1BonusEmployee.src.controller.*;
 
 public class Forms{
     private Controladora controlador;
